@@ -19,8 +19,9 @@ Disciplina: Análise e Projeto de Sistemas
 
 Orientador: Prof. Me. Denys Alves da Silva
 
-Alunos: RA Nome completo e-mail sempreceub
-
+Alunos: 22451415 Luis Filipe Campelo Aragão Belinho luis.filipeb@sempreceub.com
+        22454566 Vinicius Vinicius Mendes de Godoi vinicius.godoi@sempreceub.com
+        22450356 Jhonatan Rodrigues Silva Corrêa jhonatan.correa@sempreceub.com
 
 ---
 
