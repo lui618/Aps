@@ -40,16 +40,7 @@ O sistema **Termômetro da Felicidade** tem como propósito apoiar organizaçõe
 ## 2. Objetivos
 Desenvolver um sistema de informação para avaliar o nível de felicidade no local de trabalho, facilitando decisões gerenciais sobre o bem-estar dos colaboradores.  
 
-## 2.1 Objetivos Específicos  
-- Investigar e identificar os impactos de um **Termômetro da Felicidade no Trabalho** para aprimorar ações de gestão.  
-- Elaborar documentação de requisitos e de projeto do sistema.  
-- Construir e testar o protótipo do sistema.  
-- Realizar simulações com coleta de dados e pesquisa qualitativa sobre usabilidade.  
-- Aprimorar o sistema com base nos resultados da simulação.  
-- Contribuir com a comunidade acadêmica, compartilhando documentação, artefatos e resultados.  
-- Disponibilizar o sistema gratuitamente para organizações interessadas.  
-
-## 2.2 Benefícios Esperados
+## 2.1 Benefícios Esperados
 
 ### Para a Gestão e Organização:
 - Fornecer visibilidade em tempo real sobre o clima organizacional e variações de humor, permitindo **ações imediatas**.  
@@ -64,7 +55,7 @@ Desenvolver um sistema de informação para avaliar o nível de felicidade no lo
 
 ---
 
-## 2.3 Público-Alvo
+## 2.2 Público-Alvo
 O público-alvo são **organizações**, com foco principal nas de **pequeno e médio porte**, que atualmente não dispõem de ferramentas adequadas para monitorar de forma sistemática e contínua o bem-estar e a felicidade de seus colaboradores.  
 
 O sistema também se destina a **qualquer organização interessada** em adotar uma ferramenta gratuita para essa finalidade.  
