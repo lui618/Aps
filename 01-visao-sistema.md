@@ -40,10 +40,9 @@ O sistema também se destina a **qualquer organização interessada** em adotar 
 --- 
 
 ## 3. Stakeholders  
-- **Colaboradores**: respondem pesquisas e interagem com o sistema para medir bem-estar.  
-- **Gestores e líderes**: utilizam relatórios e indicadores para tomada de decisão.  
-- **Equipe de RH**: aplica ações de engajamento, treinamentos e acompanhamento.  
-- **Administradores do sistema**: responsáveis pela configuração, manutenção e segurança da plataforma.  
+- **Colaboradores**: São os usuários que fornecerão os dados sobre seu nível de felicidade ao interagirem com o sistema, provavelmente no momento de registrar o ponto.  
+- **Gestores**: Utilizarão o sistema para visualizar os indicadores de felicidade por meio de dashboards, acompanhar o histórico e receber sugestões de ações para melhorar o bem-estar de suas equipes.  
+- **Diretores**: utilizarão o sistema para direcionar seus gestores ao tratamento e desenvolvimento adequado ao local de trabalho.  
 
 ## 4. Escopo
 
