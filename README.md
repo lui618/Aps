@@ -85,7 +85,6 @@ O sistema também se destina a **qualquer organização interessada** em adotar 
 - Disponibilizar o sistema para plataformas **Web e Mobile**.  
 - Sugerir ações aos gestores com base nos dados coletados e na inteligência computacional.  
 - Manter um histórico dos níveis de felicidade e das ações gerenciais realizadas.  
-- Implementar um sistema de **gamificação** para incentivar a participação dos colaboradores.  
 
 **O que não está no escopo:**
 - O sistema não é uma ferramenta de registro de ponto, mas sim **integrado a ele**.  
