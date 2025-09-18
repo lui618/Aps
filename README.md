@@ -10,7 +10,7 @@ Orientador: Prof. Me. Denys Alves da Silva
 
 Alunos:  
          22451415 Luis Filipe Campelo Aragão Belinho luis.filipeb@sempreceub.com  
-         22454566 Vinicius Vinicius Mendes de Godoi vinicius.godoi@sempreceub.com  
+         22454566 Vinicius Mendes de Godoi vinicius.godoi@sempreceub.com  
          22450356 Jonatan Rodrigues Silva Corrêa jhonatan.correa@sempreceub.com  
          22452326 Cauã Gonçalves Xavier Mrad caua.xavier@sempreceub.com  
          Maria Eduarda
