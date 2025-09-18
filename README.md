@@ -1,14 +1,3 @@
-# 
-Projeto de Sistema Computacional do software "Termômetro da Felicidade".
-
-Modelo para o repositório do Projeto de Sistema Computacional para as equipes de alunos da disciplina Análise e Projeto de Sistemas.  
-
-O grupo deverá criar um repositório no GitHub
-
-O grupo deverá seguir no mínimo os tópicos abaixo para o seu projeto.
-# 
-
-
 
 # 📘 Projeto de Sistema Computacional - "Termômetro da Felicidade"
 <img width="192" height="89" alt="image" src="https://github.com/user-attachments/assets/9f00c432-def4-4de7-8b12-439b34ca8b9c" />
