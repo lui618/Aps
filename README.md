@@ -98,41 +98,261 @@ O sistema também se destina a **qualquer organização interessada** em adotar 
 
 ## 2. Diagrama de Caso de Uso
 
-📌 **O que é:**  
-Representação UML das **funcionalidades principais** e **atores envolvidos**.  
+# 🎭 Diagrama de Caso de Uso
 
-📌 **Como preencher:**  
-- Identificar os atores (usuário, administrador, sistemas externos).  
-- Identificar os casos de uso (funcionalidades).  
-- Criar o diagrama em UML (PlantUML, Lucidchart, StarUML, Draw.io).  
+## 1. Introdução
 
-📄 **Exemplo de atores e casos de uso:**  
-- Atores: Usuário, Bibliotecário.  
-- Casos de Uso: Realizar Login, Consultar Livro, Efetuar Empréstimo, Cadastrar Livro.  
+O Diagrama de Casos de Uso representa as principais funcionalidades do sistema Termômetro da Felicidade e as interações entre os diferentes atores (usuários e sistemas externos).
+Essa visão facilita a compreensão das responsabilidades de cada papel e apoia a priorização dos requisitos funcionais do projeto.
 
-📷 **Adicionar aqui o diagrama:**  
-/docs/02-diagrama-caso-uso.png
+O modelo destaca as operações de login, coleta e acompanhamento de felicidade, gamificação, sugestões, dashboards e integrações administrativas.
+Ele também serve como base para os demais artefatos UML, garantindo rastreabilidade entre requisitos e design.
+
+## 2. Atores Identificados
+
+Colaborador — Registra e acompanha seu grau de felicidade, participa de gamificação e pode enviar sugestões.
+Gestor — Acompanha os indicadores de felicidade da equipe e recebe sugestões enviadas pelos colaboradores.
+Diretor — Visualiza o dashboard geral da equipe para análise organizacional.
+Administrador — Gerencia usuários, permissões e configurações de integração com o sistema de ponto.
+Sistema de Ponto (externo) — Envia registros de ponto ao sistema principal, possibilitando o vínculo automático com a coleta de felicidade.
+
+## 3. Casos de Uso
+3.1 Realizar Login — Todos os Usuários
+
+Descrição: Permite que qualquer usuário autenticado acesse o sistema.
+Pré-condição: O usuário deve possuir uma conta cadastrada.
+Fluxo Principal: O usuário informa credenciais → o sistema valida → o acesso é concedido.
+
+3.2 Cadastrar, Editar e Excluir Conta — Administrador / Colaborador
+
+Descrição: Permite o gerenciamento de contas de usuários (criação, atualização e exclusão).
+Relação: Casos de uso relacionados ao “Realizar Login” por meio de <<extend>>.
+Pré-condição: O usuário deve possuir permissões adequadas (administrador ou colaborador autenticado).
+
+3.3 Responder Questionário de Felicidade — Colaborador
+
+Descrição: O colaborador responde periodicamente ao questionário para registrar seu estado emocional.
+Relação: Inclui o caso “Registrar Grau de Felicidade Anônimo” e pode se estender a “Participar de Gamificação” e “Enviar Sugestão”.
+Fluxo Principal: O sistema exibe o questionário → o colaborador responde → os dados são salvos no histórico pessoal.
+
+3.4 Registrar Grau de Felicidade Anônimo — Colaborador
+
+Descrição: Permite o envio de um registro de felicidade sem identificação direta do colaborador.
+Relação: É um caso <<include>> do questionário de felicidade.
+
+3.5 Participar de Gamificação — Colaborador
+
+Descrição: O colaborador acumula pontos por respostas e interações, participando de rankings e desafios.
+Relação: Estende o caso “Responder Questionário de Felicidade”.
+Pré-condição: Deve haver registros válidos de felicidade no sistema.
+
+3.6 Enviar Sugestão — Colaborador
+
+Descrição: Permite ao colaborador enviar sugestões de melhorias ou ações relacionadas ao ambiente de trabalho.
+Relação: Estende o caso “Responder Questionário de Felicidade”.
+
+3.7 Visualizar Histórico Pessoal — Colaborador
+
+Descrição: Exibe ao colaborador seu histórico de registros de felicidade e evolução ao longo do tempo.
+Pré-condição: O colaborador deve estar autenticado.
+
+3.8 Visualizar Dashboard da Equipe — Gestor / Diretor
+
+Descrição: Exibe indicadores agregados de felicidade dos colaboradores da equipe.
+Fluxo Principal: O gestor ou diretor acessa o painel → o sistema processa e apresenta gráficos e médias.
+
+3.9 Receber Sugestões — Gestor
+
+Descrição: O gestor recebe e visualiza as sugestões enviadas pelos colaboradores para possíveis ações.
+Pré-condição: Deve haver sugestões enviadas no sistema.
+
+3.10 Gerenciar Usuários e Permissões — Administrador
+
+Descrição: Permite ao administrador criar, editar ou remover contas e papéis de acesso.
+Pré-condição: Usuário autenticado com permissão administrativa.
+
+3.11 Configurar Integração com Ponto — Administrador
+
+Descrição: Define parâmetros técnicos da integração com o sistema de ponto eletrônico.
+Fluxo Principal: O administrador acessa as configurações → insere dados de integração → o sistema valida e salva.
+
+3.12 Enviar Registro de Ponto — Sistema de Ponto (Externo) / Colaborador
+
+Descrição:
+Representa o momento em que o colaborador realiza a entrada na empresa, registrando o ponto por meio do Sistema de Ponto.
+Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que o colaborador informe seu grau de felicidade.
+
+## 4. Diagrama UML
+![alt text](image-1.png)
 
 ---
 
 ## 3. Especificação de Caso de Uso
 
-📌 **O que é:**  
-Descrição detalhada do **fluxo principal e alternativo** de cada caso de uso.  
+# 📝 Especificação de Casos de Uso – Termômetro da Felicidade
 
-📌 **Modelo de Tabela:**  
-
-| Item                  | Descrição |
-|-----------------------|-----------|
-| **Nome**              | Realizar Login |
-| **Ator Principal**    | Usuário |
-| **Pré-condições**     | Usuário já cadastrado no sistema |
-| **Fluxo Principal**   | 1. Usuário insere login e senha <br> 2. Sistema valida credenciais <br> 3. Sistema libera acesso |
+## 3.1 Realizar Login
+| Item                 | Descrição |
+|----------------------|-----------|
+| **Nome**             | Realizar Login |
+| **Ator Principal**   | Usuário (Colaborador, Gestor, Diretor, Administrador) |
+| **Pré-condições**    | Usuário já cadastrado no sistema |
+| **Fluxo Principal**  | 1. Usuário insere login e senha <br> 2. Sistema valida credenciais <br> 3. Sistema libera acesso |
 | **Fluxos Alternativos** | Senha incorreta → Sistema exibe mensagem de erro |
-| **Pós-condições**     | Usuário autenticado no sistema |
-| **Regras de negócio** | Senha deve ter no mínimo 8 caracteres |
+| **Pós-condições**    | Usuário autenticado no sistema |
+| **Regras de negócio**| Senha deve ter no mínimo 8 caracteres |
 
-📄 Criar uma tabela como esta **para cada caso de uso** identificado.
+---
+
+## 3.2 Cadastrar Conta
+| Item               | Descrição |
+|--------------------|-----------|
+| **Nome**           | Cadastrar Conta |
+| **Ator Principal** | Colaborador / Administrador |
+| **Pré-condições**  | Usuário autenticado com permissões adequadas |
+| **Fluxo Principal**| 1. Usuário acessa tela de cadastro <br> 2. Preenche dados obrigatórios <br> 3. Sistema valida e cria a conta |
+| **Fluxos Alternativos** | Dados inválidos → Sistema solicita correção |
+| **Pós-condições**  | Conta criada com sucesso |
+
+---
+
+## 3.3 Editar Conta
+| Item               | Descrição |
+|--------------------|-----------|
+| **Nome**           | Editar Conta |
+| **Ator Principal** | Colaborador / Administrador |
+| **Pré-condições**  | Usuário autenticado |
+| **Fluxo Principal**| 1. Usuário acessa sua conta <br> 2. Altera dados desejados <br> 3. Sistema valida e confirma alterações |
+| **Fluxos Alternativos** | Dados inválidos → Sistema solicita correção |
+| **Pós-condições**  | Dados atualizados com sucesso |
+
+---
+
+## 3.4 Excluir Conta
+| Item               | Descrição |
+|--------------------|-----------|
+| **Nome**           | Excluir Conta |
+| **Ator Principal** | Administrador |
+| **Pré-condições**  | Administrador autenticado |
+| **Fluxo Principal**| 1. Administrador seleciona conta <br> 2. Sistema exibe confirmação <br> 3. Conta é removida do sistema |
+| **Fluxos Alternativos** | Se usuário tentar excluir sua própria conta → Sistema bloqueia ação |
+| **Pós-condições**  | Conta removida do sistema |
+
+---
+
+## 3.5 Responder Questionário de Felicidade
+| Item               | Descrição |
+|--------------------|-----------|
+| **Nome**           | Responder Questionário de Felicidade |
+| **Ator Principal** | Colaborador |
+| **Pré-condições**  | Colaborador autenticado no sistema |
+| **Fluxo Principal**| 1. Sistema exibe questionário <br> 2. Colaborador responde <br> 3. Sistema registra no histórico |
+| **Fluxos Alternativos** | Conexão perdida → Sistema salva parcialmente e retoma |
+| **Pós-condições**  | Registro salvo no histórico pessoal |
+| **Relações**       | `<<include>> Registrar Grau de Felicidade Anônimo` <br> `<<extend>> Participar de Gamificação / Enviar Sugestão` |
+
+---
+
+## 3.6 Registrar Grau de Felicidade Anônimo
+| Item               | Descrição |
+|--------------------|-----------|
+| **Nome**           | Registrar Grau de Felicidade Anônimo |
+| **Ator Principal** | Colaborador |
+| **Pré-condições**  | Acesso ao questionário ativo |
+| **Fluxo Principal**| 1. Colaborador responde questionário <br> 2. Sistema salva resposta sem vínculo com identidade |
+| **Pós-condições**  | Registro anônimo armazenado |
+| **Relações**       | `<<include>> do Questionário de Felicidade` |
+
+---
+
+## 3.7 Participar de Gamificação
+| Item               | Descrição |
+|--------------------|-----------|
+| **Nome**           | Participar de Gamificação |
+| **Ator Principal** | Colaborador |
+| **Pré-condições**  | Respostas válidas no questionário |
+| **Fluxo Principal**| 1. Colaborador participa respondendo <br> 2. Sistema gera pontos e atualiza ranking |
+| **Pós-condições**  | Colaborador pontua na gamificação |
+| **Relações**       | `<<extend>> do Questionário de Felicidade` |
+
+---
+
+## 3.8 Enviar Sugestão
+| Item               | Descrição |
+|--------------------|-----------|
+| **Nome**           | Enviar Sugestão |
+| **Ator Principal** | Colaborador |
+| **Pré-condições**  | Colaborador autenticado |
+| **Fluxo Principal**| 1. Colaborador escreve sugestão <br> 2. Sistema registra e envia ao Gestor |
+| **Pós-condições**  | Sugestão disponível para gestores |
+| **Relações**       | `<<extend>> do Questionário de Felicidade` |
+
+---
+
+## 3.9 Visualizar Histórico Pessoal
+| Item               | Descrição |
+|--------------------|-----------|
+| **Nome**           | Visualizar Histórico Pessoal |
+| **Ator Principal** | Colaborador |
+| **Pré-condições**  | Colaborador autenticado |
+| **Fluxo Principal**| 1. Colaborador acessa histórico <br> 2. Sistema exibe registros passados |
+| **Pós-condições**  | Histórico exibido para análise individual |
+
+---
+
+## 3.10 Visualizar Dashboard da Equipe
+| Item               | Descrição |
+|--------------------|-----------|
+| **Nome**           | Visualizar Dashboard da Equipe |
+| **Ator Principal** | Gestor / Diretor |
+| **Pré-condições**  | Usuário autenticado |
+| **Fluxo Principal**| 1. Usuário acessa dashboard <br> 2. Sistema processa e apresenta gráficos |
+| **Pós-condições**  | Indicadores exibidos para tomada de decisão |
+
+---
+
+## 3.11 Receber Sugestões
+| Item               | Descrição |
+|--------------------|-----------|
+| **Nome**           | Receber Sugestões |
+| **Ator Principal** | Gestor |
+| **Pré-condições**  | Sugestões enviadas por colaboradores |
+| **Fluxo Principal**| 1. Sistema lista sugestões <br> 2. Gestor visualiza e avalia |
+| **Pós-condições**  | Sugestões ficam disponíveis para análise |
+
+---
+
+## 3.12 Gerenciar Usuários e Permissões
+| Item               | Descrição |
+|--------------------|-----------|
+| **Nome**           | Gerenciar Usuários e Permissões |
+| **Ator Principal** | Administrador |
+| **Pré-condições**  | Administrador autenticado |
+| **Fluxo Principal**| 1. Administrador acessa painel de usuários <br> 2. Adiciona, altera ou remove permissões |
+| **Pós-condições**  | Usuários e papéis atualizados |
+
+---
+
+## 3.13 Configurar Integração com Ponto
+| Item               | Descrição |
+|--------------------|-----------|
+| **Nome**           | Configurar Integração com Ponto |
+| **Ator Principal** | Administrador |
+| **Pré-condições**  | Administrador autenticado |
+| **Fluxo Principal**| 1. Admin insere parâmetros técnicos <br> 2. Sistema valida <br> 3. Configuração salva |
+| **Pós-condições**  | Integração habilitada |
+
+---
+
+## 3.14 Enviar Registro de Ponto
+| Item               | Descrição |
+|--------------------|-----------|
+| **Nome**           | Enviar Registro de Ponto |
+| **Ator Principal** | Sistema de Ponto (Externo) |
+| **Pré-condições**  | Sistema de ponto ativo |
+| **Fluxo Principal**| 1. Colaborador registra entrada <br> 2. Sistema de ponto envia dados ao Termômetro <br> 3. Sistema solicita grau de felicidade |
+| **Pós-condições**  | Registro de ponto vinculado ao questionário de felicidade |
+
 
 ---
 
