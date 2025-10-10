@@ -33,15 +33,15 @@ Alunos:
 
 # 📖 Documento de Visão do Sistema - Termômetro da Felicidade
 
-## 1. Introdução  
+## 1.1 Introdução  
 O sistema **Termômetro da Felicidade** tem como propósito apoiar organizações na **avaliação e acompanhamento do bem-estar e felicidade dos colaboradores**. Ele será uma ferramenta computacional de apoio à decisão, permitindo que gestores tenham indicadores claros e confiáveis sobre aspectos emocionais, sociais e profissionais dos funcionários, indo além de métricas tradicionais como produtividade e absenteísmo.  
 
 ---
 
-## 2. Objetivos
+## 1.2 Objetivos
 Desenvolver um sistema de informação para avaliar o nível de felicidade no local de trabalho, facilitando decisões gerenciais sobre o bem-estar dos colaboradores.  
 
-## 2.1 Benefícios Esperados
+## 1.3 Benefícios Esperados
 
 ### Para a Gestão e Organização:
 - Fornecer visibilidade em tempo real sobre o clima organizacional e variações de humor, permitindo **ações imediatas**.  
@@ -56,20 +56,20 @@ Desenvolver um sistema de informação para avaliar o nível de felicidade no lo
 
 ---
 
-## 2.2 Público-Alvo
+## 1.4 Público-Alvo
 O público-alvo são **organizações**, com foco principal nas de **pequeno e médio porte**, que atualmente não dispõem de ferramentas adequadas para monitorar de forma sistemática e contínua o bem-estar e a felicidade de seus colaboradores.  
 
 O sistema também se destina a **qualquer organização interessada** em adotar uma ferramenta gratuita para essa finalidade.  
 
 --- 
 
-## 3. Stakeholders  
+## 1.5 Stakeholders  
 - **Colaboradores**: respondem pesquisas e interagem com o sistema para medir bem-estar.  
 - **Gestores e líderes**: utilizam relatórios e indicadores para tomada de decisão.  
 - **Equipe de RH**: aplica ações de engajamento, treinamentos e acompanhamento.  
 - **Administradores do sistema**: responsáveis pela configuração, manutenção e segurança da plataforma.  
 
-## 4. Escopo
+## 1.6 Escopo
 
 **O que está no escopo:**
 - Coletar o grau de felicidade dos colaboradores de forma integrada ao momento do registro de ponto.  
@@ -83,13 +83,13 @@ O sistema também se destina a **qualquer organização interessada** em adotar 
 - Não se trata de uma plataforma para terapia ou apoio psicológico direto, mas sim uma ferramenta de **monitoramento para gestão**.  
 - O sistema não substituirá outros processos de Recursos Humanos, como **avaliação de desempenho ou controle de frequência**.  
 
-## 5. Restrições  
+## 1.7 Restrições  
 - **Técnicas**: necessidade de integração segura com banco de dados; sistema deve ser responsivo (desktop e mobile).  
 - **Orçamento**: foco em soluções acessíveis para pequenas e médias empresas, evitando altos custos de licenciamento.  
 - **Prazos**: dependentes do cronograma de pesquisa e desenvolvimento.  
 - **Requisitos obrigatórios**: confidencialidade dos dados, conformidade com a **LGPD**.  
 
-## 6. Critérios de Sucesso  
+## 1.8 Critérios de Sucesso  
 - Pelo menos **70% dos colaboradores** participando das medições periódicas.  
 - Adoção do sistema por pelo menos **X organizações piloto** em até 6 meses.  
 - **Redução de absenteísmo ou turnover** nas organizações que utilizarem o sistema.  
@@ -98,9 +98,7 @@ O sistema também se destina a **qualquer organização interessada** em adotar 
 
 ## 2. Diagrama de Caso de Uso
 
-# 🎭 Diagrama de Caso de Uso
-
-## 1. Introdução
+## 2.1 Introdução
 
 O Diagrama de Casos de Uso representa as principais funcionalidades do sistema Termômetro da Felicidade e as interações entre os diferentes atores (usuários e sistemas externos).
 Essa visão facilita a compreensão das responsabilidades de cada papel e apoia a priorização dos requisitos funcionais do projeto.
@@ -108,7 +106,7 @@ Essa visão facilita a compreensão das responsabilidades de cada papel e apoia 
 O modelo destaca as operações de login, coleta e acompanhamento de felicidade, gamificação, sugestões, dashboards e integrações administrativas.
 Ele também serve como base para os demais artefatos UML, garantindo rastreabilidade entre requisitos e design.
 
-## 2. Atores Identificados
+## 2.2 Atores Identificados
 
 Colaborador — Registra e acompanha seu grau de felicidade, participa de gamificação e pode enviar sugestões.
 Gestor — Acompanha os indicadores de felicidade da equipe e recebe sugestões enviadas pelos colaboradores.
@@ -116,73 +114,73 @@ Diretor — Visualiza o dashboard geral da equipe para análise organizacional.
 Administrador — Gerencia usuários, permissões e configurações de integração com o sistema de ponto.
 Sistema de Ponto (externo) — Envia registros de ponto ao sistema principal, possibilitando o vínculo automático com a coleta de felicidade.
 
-## 3. Casos de Uso
-3.1 Realizar Login — Todos os Usuários
+## 2.3 Casos de Uso
+2.3.1 Realizar Login — Todos os Usuários
 
 Descrição: Permite que qualquer usuário autenticado acesse o sistema.
 Pré-condição: O usuário deve possuir uma conta cadastrada.
 Fluxo Principal: O usuário informa credenciais → o sistema valida → o acesso é concedido.
 
-3.2 Cadastrar, Editar e Excluir Conta — Administrador / Colaborador
+2.3.2 Cadastrar, Editar e Excluir Conta — Administrador / Colaborador
 
 Descrição: Permite o gerenciamento de contas de usuários (criação, atualização e exclusão).
 Relação: Casos de uso relacionados ao “Realizar Login” por meio de <<extend>>.
 Pré-condição: O usuário deve possuir permissões adequadas (administrador ou colaborador autenticado).
 
-3.3 Responder Questionário de Felicidade — Colaborador
+2.3.3 Responder Questionário de Felicidade — Colaborador
 
 Descrição: O colaborador responde periodicamente ao questionário para registrar seu estado emocional.
 Relação: Inclui o caso “Registrar Grau de Felicidade Anônimo” e pode se estender a “Participar de Gamificação” e “Enviar Sugestão”.
 Fluxo Principal: O sistema exibe o questionário → o colaborador responde → os dados são salvos no histórico pessoal.
 
-3.4 Registrar Grau de Felicidade Anônimo — Colaborador
+2.3.4 Registrar Grau de Felicidade Anônimo — Colaborador
 
 Descrição: Permite o envio de um registro de felicidade sem identificação direta do colaborador.
 Relação: É um caso <<include>> do questionário de felicidade.
 
-3.5 Participar de Gamificação — Colaborador
+2.3.5 Participar de Gamificação — Colaborador
 
 Descrição: O colaborador acumula pontos por respostas e interações, participando de rankings e desafios.
 Relação: Estende o caso “Responder Questionário de Felicidade”.
 Pré-condição: Deve haver registros válidos de felicidade no sistema.
 
-3.6 Enviar Sugestão — Colaborador
+2.3.6 Enviar Sugestão — Colaborador
 
 Descrição: Permite ao colaborador enviar sugestões de melhorias ou ações relacionadas ao ambiente de trabalho.
 Relação: Estende o caso “Responder Questionário de Felicidade”.
 
-3.7 Visualizar Histórico Pessoal — Colaborador
+2.3.7 Visualizar Histórico Pessoal — Colaborador
 
 Descrição: Exibe ao colaborador seu histórico de registros de felicidade e evolução ao longo do tempo.
 Pré-condição: O colaborador deve estar autenticado.
 
-3.8 Visualizar Dashboard da Equipe — Gestor / Diretor
+2.3.8 Visualizar Dashboard da Equipe — Gestor / Diretor
 
 Descrição: Exibe indicadores agregados de felicidade dos colaboradores da equipe.
 Fluxo Principal: O gestor ou diretor acessa o painel → o sistema processa e apresenta gráficos e médias.
 
-3.9 Receber Sugestões — Gestor
+2.3.9 Receber Sugestões — Gestor
 
 Descrição: O gestor recebe e visualiza as sugestões enviadas pelos colaboradores para possíveis ações.
 Pré-condição: Deve haver sugestões enviadas no sistema.
 
-3.10 Gerenciar Usuários e Permissões — Administrador
+2.3.10 Gerenciar Usuários e Permissões — Administrador
 
 Descrição: Permite ao administrador criar, editar ou remover contas e papéis de acesso.
 Pré-condição: Usuário autenticado com permissão administrativa.
 
-3.11 Configurar Integração com Ponto — Administrador
+2.3.11 Configurar Integração com Ponto — Administrador
 
 Descrição: Define parâmetros técnicos da integração com o sistema de ponto eletrônico.
 Fluxo Principal: O administrador acessa as configurações → insere dados de integração → o sistema valida e salva.
 
-3.12 Enviar Registro de Ponto — Sistema de Ponto (Externo) / Colaborador
+2.3.12 Enviar Registro de Ponto — Sistema de Ponto (Externo) / Colaborador
 
 Descrição:
 Representa o momento em que o colaborador realiza a entrada na empresa, registrando o ponto por meio do Sistema de Ponto.
 Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que o colaborador informe seu grau de felicidade.
 
-## 4. Diagrama UML
+## 2.4 Diagrama UML
 ![alt text](image-1.png)
 
 ---
@@ -204,7 +202,7 @@ Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que 
 
 ---
 
-## 3.2 Cadastrar Conta
+## 3.2.1 Cadastrar Conta
 | Item               | Descrição |
 |--------------------|-----------|
 | **Nome**           | Cadastrar Conta |
@@ -216,7 +214,7 @@ Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que 
 
 ---
 
-## 3.3 Editar Conta
+## 3.2.2 Editar Conta
 | Item               | Descrição |
 |--------------------|-----------|
 | **Nome**           | Editar Conta |
@@ -228,7 +226,7 @@ Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que 
 
 ---
 
-## 3.4 Excluir Conta
+## 3.2.3 Excluir Conta
 | Item               | Descrição |
 |--------------------|-----------|
 | **Nome**           | Excluir Conta |
@@ -240,7 +238,7 @@ Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que 
 
 ---
 
-## 3.5 Responder Questionário de Felicidade
+## 3.3 Responder Questionário de Felicidade
 | Item               | Descrição |
 |--------------------|-----------|
 | **Nome**           | Responder Questionário de Felicidade |
@@ -253,7 +251,7 @@ Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que 
 
 ---
 
-## 3.6 Registrar Grau de Felicidade Anônimo
+## 3.4 Registrar Grau de Felicidade Anônimo
 | Item               | Descrição |
 |--------------------|-----------|
 | **Nome**           | Registrar Grau de Felicidade Anônimo |
@@ -265,7 +263,7 @@ Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que 
 
 ---
 
-## 3.7 Participar de Gamificação
+## 3.5 Participar de Gamificação
 | Item               | Descrição |
 |--------------------|-----------|
 | **Nome**           | Participar de Gamificação |
@@ -277,7 +275,7 @@ Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que 
 
 ---
 
-## 3.8 Enviar Sugestão
+## 3.6 Enviar Sugestão
 | Item               | Descrição |
 |--------------------|-----------|
 | **Nome**           | Enviar Sugestão |
@@ -289,7 +287,7 @@ Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que 
 
 ---
 
-## 3.9 Visualizar Histórico Pessoal
+## 3.7 Visualizar Histórico Pessoal
 | Item               | Descrição |
 |--------------------|-----------|
 | **Nome**           | Visualizar Histórico Pessoal |
@@ -300,7 +298,7 @@ Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que 
 
 ---
 
-## 3.10 Visualizar Dashboard da Equipe
+## 3.8 Visualizar Dashboard da Equipe
 | Item               | Descrição |
 |--------------------|-----------|
 | **Nome**           | Visualizar Dashboard da Equipe |
@@ -311,7 +309,7 @@ Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que 
 
 ---
 
-## 3.11 Receber Sugestões
+## 3.9 Receber Sugestões
 | Item               | Descrição |
 |--------------------|-----------|
 | **Nome**           | Receber Sugestões |
@@ -322,7 +320,7 @@ Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que 
 
 ---
 
-## 3.12 Gerenciar Usuários e Permissões
+## 3.10 Gerenciar Usuários e Permissões
 | Item               | Descrição |
 |--------------------|-----------|
 | **Nome**           | Gerenciar Usuários e Permissões |
@@ -333,7 +331,7 @@ Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que 
 
 ---
 
-## 3.13 Configurar Integração com Ponto
+## 3.11 Configurar Integração com Ponto
 | Item               | Descrição |
 |--------------------|-----------|
 | **Nome**           | Configurar Integração com Ponto |
@@ -344,7 +342,7 @@ Esse evento aciona automaticamente o Termômetro da Felicidade, solicitando que 
 
 ---
 
-## 3.14 Enviar Registro de Ponto
+## 3.12 Enviar Registro de Ponto
 | Item               | Descrição |
 |--------------------|-----------|
 | **Nome**           | Enviar Registro de Ponto |
