@@ -56,4 +56,4 @@ sistema e representam como cada elemento coopera para o funcionamento do
 Termômetro da Felicidade.
 
 ## 4. Diagrama UML
-![alt text](image-2.png)
+![alt text](image.png)
