@@ -29,9 +29,9 @@ Alunos:
 
 ---
 
-## 1. Documento de Visão do Sistema
 
-# 📖 Documento de Visão do Sistema - Termômetro da Felicidade
+
+# 1. Documento de Visão do Sistema - Termômetro da Felicidade
 
 ## 1.1 Introdução  
 O sistema **Termômetro da Felicidade** tem como propósito apoiar organizações na **avaliação e acompanhamento do bem-estar e felicidade dos colaboradores**. Ele será uma ferramenta computacional de apoio à decisão, permitindo que gestores tenham indicadores claros e confiáveis sobre aspectos emocionais, sociais e profissionais dos funcionários, indo além de métricas tradicionais como produtividade e absenteísmo.  
