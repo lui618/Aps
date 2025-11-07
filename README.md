@@ -365,7 +365,7 @@ O sistema Termômetro da Felicidade adota uma arquitetura em camadas, composta p
 - Bibliotecas: Pandas, SQLAlchemy, Axios, Chart.js, TailwindCSS
 - Controle de versão: GitHub
 - Ambiente de hospedagem: Render, Vercel ou AWS
-- 
+  
 ## 5.3. Integrações
 
 O sistema poderá integrar-se com APIs externas, como serviços de autenticação (Google Auth), plataformas de RH, e ferramentas analíticas. As integrações visam enriquecer a coleta e análise de dados, mantendo a interoperabilidade e segurança das informações.
