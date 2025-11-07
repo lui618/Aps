@@ -350,3 +350,35 @@ Esses relacionamentos permitem o fluxo de informações entre as partes do siste
 
 ## 4.4. Diagrama UML
 ![alt text](image.png)
+
+## 5. Arquitetura do sistema
+
+## 5.1 Visão Geral
+
+O sistema Termômetro da Felicidade adota uma arquitetura em camadas, composta por camada de apresentação, camada de lógica de negócios e camada de persistência. Essa divisão promove maior organização, segurança e facilidade de manutenção. O modelo segue o padrão MVC (Model-View-Controller), onde a interface do usuário se comunica com os controladores, que por sua vez acessam os modelos e o banco de dados.
+
+## 5.2. Tecnologias Utilizadas
+
+- Linguagem de programação: Python (para backend) e JavaScript (para frontend)
+- Frameworks: Django ou Flask no backend; React ou Next.js no frontend
+- Banco de dados: PostgreSQL
+- Bibliotecas: Pandas, SQLAlchemy, Axios, Chart.js, TailwindCSS
+- Controle de versão: GitHub
+- Ambiente de hospedagem: Render, Vercel ou AWS
+- 
+## 5.3. Integrações
+
+O sistema poderá integrar-se com APIs externas, como serviços de autenticação (Google Auth), plataformas de RH, e ferramentas analíticas. As integrações visam enriquecer a coleta e análise de dados, mantendo a interoperabilidade e segurança das informações.
+
+## 5.4. Segurança
+
+A segurança será garantida através de autenticação por token JWT, criptografia de dados sensíveis e uso de HTTPS. Cada perfil de usuário (colaborador, gestor, diretor e administrador) terá permissões específicas definidas em um sistema de controle de acesso baseado em papéis (RBAC).
+5. Requisitos Não Funcionais
+- Desempenho: o sistema deve responder a requisições em até 3 segundos.
+- Disponibilidade: uptime mínimo de 99%.
+- Escalabilidade: suporte a crescimento horizontal por meio de contêineres Docker.
+- Segurança: conformidade com a LGPD.
+- Usabilidade: interface intuitiva e responsiva para desktop e dispositivos móveis.
+  
+## 5.6. Diagrama Arquitetural
+O diagrama abaixo representa a interação entre as camadas do sistema e os principais componentes (Frontend, Backend, Banco de Dados e APIs externas).
