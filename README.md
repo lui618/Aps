@@ -373,7 +373,8 @@ O sistema poderá integrar-se com APIs externas, como serviços de autenticaçã
 ## 5.4. Segurança
 
 A segurança será garantida através de autenticação por token JWT, criptografia de dados sensíveis e uso de HTTPS. Cada perfil de usuário (colaborador, gestor, diretor e administrador) terá permissões específicas definidas em um sistema de controle de acesso baseado em papéis (RBAC).
-5. Requisitos Não Funcionais
+
+## 5.5. Requisitos Não Funcionais
 - Desempenho: o sistema deve responder a requisições em até 3 segundos.
 - Disponibilidade: uptime mínimo de 99%.
 - Escalabilidade: suporte a crescimento horizontal por meio de contêineres Docker.
