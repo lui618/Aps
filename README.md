@@ -381,5 +381,3 @@ A segurança será garantida através de autenticação por token JWT, criptogra
 - Segurança: conformidade com a LGPD.
 - Usabilidade: interface intuitiva e responsiva para desktop e dispositivos móveis.
   
-## 5.6. Diagrama Arquitetural
-O diagrama abaixo representa a interação entre as camadas do sistema e os principais componentes (Frontend, Backend, Banco de Dados e APIs externas).
