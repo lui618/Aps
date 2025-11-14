@@ -394,35 +394,50 @@ Com o protótipo, é possível avaliar se as telas atendem às necessidades do p
 
 ## 6.2. Ferramentas Utilizadas
 
-O protótipo foi desenvolvido utilizando a ferramenta Figma, que possibilita criar telas interativas, fluxos completos e componentes reutilizáveis.
-Outras ferramentas alternativas que poderiam ser usadas incluem Balsamiq, Draw.io e PowerPoint, mas o Figma foi escolhido por oferecer melhor controle visual e recursos modernos de prototipagem.
+O protótipo foi desenvolvido utilizando a ferramenta Figma, que possibilita criar telas interativas, fluxos completos e componentes reutilizáveis. O Figma foi escolhido por oferecer melhor controle visual e recursos modernos de prototipagem.
 
 ## 6.3. Telas do Sistema
 
 As seguintes telas foram prototipadas:
 
-Tela de Login
-Entrada do usuário com campos de email e senha.
+### Tela de Login
 
-Tela de Cadastro
-Formulário para criação de nova conta (nome, email, senha).
+Permite a entrada do usuário com campos de email e senha.
 
-Dashboard
-Visão geral do sistema, incluindo ações rápidas e resumo de atividades.
+### Tela de Cadastro
 
-Tela de Histórico
-Lista de transações organizadas por data, com status (Paid, Issued, Overdue).
+Formulário para criação de uma nova conta, incluindo nome, email e senha.
 
-Tela de Detalhes da Transação
-Mostra informações completas sobre uma transação selecionada.
+### Dashboard
 
-Tela de Nova Fatura (New Invoice)
-Formulário para criar nova fatura com itens, valores e cliente.
+Visão geral do nível de “felicidade” da empresa, com ações rápidas e um resumo das atividades recentes.
 
-Tela de Confirmação
-Mensagem de sucesso após criação da fatura, com opções de visualizar ou voltar ao dashboard.
+### Tela de Histórico
+
+Apresenta o histórico de humor dos últimos dias para cada usuário, permitindo acompanhar tendências.
+
+### Tela de Perfil
+
+Mostra as informações pessoais do colaborador e suas configurações básicas.
+
+### Tela para Registrar Felicidade Rápida
+
+Exibida automaticamente ao iniciar o app, permitindo ao colaborador registrar rapidamente seu humor diário.
+
+### Tela de Participação
+
+Exibe indicadores de adesão ao sistema, mostrando se os colaboradores estão registrando suas felicidades e sugestões.
+
+### Tela de Questionário
+
+Coleta informações mais detalhadas sobre o humor e bem-estar do colaborador por meio de um formulário.
+
+### Tela de Ranking
+
+Apresenta um ranking geral dos colaboradores com base no humor registrado, destacando quem pode precisar de mais atenção da equipe de gestão.
 
 ## 6.4. Protótipo
+
 ### Telas universais
 <img src="Tela_de_login.png" width="300"> <img src="Tela_de_cadastro.png" width="300"> <img src="Tela_de_perfil.png" width="300">
 
