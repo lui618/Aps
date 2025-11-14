@@ -424,16 +424,13 @@ Mensagem de sucesso após criação da fatura, com opções de visualizar ou vol
 
 ## 6.4. Protótipo
 ### Telas universais
-![alt text](Tela_de_login.png)
-![alt text](Tela_de_cadastro.png)
-![alt text](Tela_de_perfil.png)
+<img src="Tela_de_login.png" width="300"> <br> <img src="Tela_de_cadastro.png" width="300"> <br> <img src="Tela_de_perfil.png" width="300">
+
 ### Telas do gestor
-![alt text](Tela_inicial.png)
-![alt text](Tela_de_participação.png)
+<img src="Tela_inicial.png" width="300"> <br> <img src="Tela_de_participação.png" width="300">
+
 ### Telas do colaborador
-![alt text](Tela_de_historico.png)
-![alt text](Tela_de_questionário.png)
-![alt text](Tela_de_ranking.png)
-![alt text](Registrar_felicidade_rápida.png)
+
+<img src="Tela_de_historico.png" width="300"> <br> <img src="Tela_de_questionário.png" width="300"> <br> <img src="Tela_de_ranking.png" width="300"> <br> <img src="Registrar_felicidade_rápida.png" width="300">
 
 
