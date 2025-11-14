@@ -423,12 +423,15 @@ Tela de Confirmação
 Mensagem de sucesso após criação da fatura, com opções de visualizar ou voltar ao dashboard.
 
 ## 6.4. Protótipo
+### Telas universais
 ![alt text](Tela_de_login.png)
 ![alt text](Tela_de_cadastro.png)
-![alt text](Tela_inicial.png)
-![alt text](Tela_de_historico.png)
-![alt text](Tela_de_participação.png)
 ![alt text](Tela_de_perfil.png)
+### Telas do gestor
+![alt text](Tela_inicial.png)
+![alt text](Tela_de_participação.png)
+### Telas do colaborador
+![alt text](Tela_de_historico.png)
 ![alt text](Tela_de_questionário.png)
 ![alt text](Tela_de_ranking.png)
 ![alt text](Registrar_felicidade_rápida.png)
